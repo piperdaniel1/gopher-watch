@@ -5,6 +5,7 @@ go 1.23.3
 require github.com/shirou/gopsutil/v4 v4.24.10
 
 require (
+	github.com/DATA-DOG/go-sqlmock v1.5.2 // indirect
 	github.com/ebitengine/purego v0.8.1 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/lib/pq v1.10.9 // indirect

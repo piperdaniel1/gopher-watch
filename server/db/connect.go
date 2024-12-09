@@ -5,20 +5,13 @@ import (
 	"fmt"
 
 	_ "github.com/lib/pq"
+	"github.com/piperdaniel1/gopher-watch/server/config"
 )
 
-const (
-	host     = "localhost"
-	port     = 5432
-	user     = "root"
-	password = "password"
-	dbname   = "gopher_watch"
-)
-
-func GetDBConnection() (*sql.DB, error) {
+func GetDBConnection(cfg config.DBConfig) (*sql.DB, error) {
 	psqlconn := fmt.Sprintf(
 		"host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
-		host, port, user, password, dbname,
+		cfg.GetDBHost(), cfg.GetDBPort(), cfg.GetDBUser(), cfg.GetDBPassword(), cfg.GetDBName(),
 	)
 
 	db, err := sql.Open("postgres", psqlconn)

@@ -1,0 +1,7 @@
+{
+  "DBHost": "localhost",
+  "DBPort": 5433,
+  "DBUser": "root",
+  "DBPassword": "password",
+  "DBName": "gopher_watch"
+}
